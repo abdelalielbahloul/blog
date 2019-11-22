@@ -2,7 +2,7 @@
 
 @section('body')
     <br>
-    <div class="row">
+    <div id="body" class="row">
         <div class="columns">
             <div class="column is-10">
                 <nav class="breadcrumb is-left" aria-label="breadcrumbs">
@@ -21,18 +21,19 @@
     <br>
     <h1 id="titleForm"><strong>Create new post</strong></h1>
     <br>
-    <form action="" method="post">
+<form action="/posts" method="post">
+        {{ csrfField() }}
         <div class="field">
             <label class="label">Name</label>
             <div class="control">
-                <input class="input" type="text" placeholder="Title">
+                <input class="input" type="text" name="title" placeholder="Title">
             </div>
         </div>
         
         <div class="field">
             <label class="label">Body</label>
             <div class="control">
-                <textarea class="textarea" placeholder="body"></textarea>
+                <textarea class="textarea" name="body" placeholder="Body"></textarea>
             </div>
         </div>
         
