@@ -18,4 +18,6 @@ const Route = use('Route')
 
 Route.on('/').render('welcome')
 
-Route.get('/post', 'PostController.index')
+Route.get('/posts', 'PostController.index')
+Route.get('/posts/create', 'PostController.create')
+

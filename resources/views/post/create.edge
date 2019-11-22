@@ -1,0 +1,48 @@
+@layout('master')
+
+@section('body')
+    <br>
+    <div class="row">
+        <div class="columns">
+            <div class="column is-10">
+                <nav class="breadcrumb is-left" aria-label="breadcrumbs">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/posts">Posts</a></li>
+                        <li class="is-active"><a aria-current="page">Create</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="column is-2 is-right">
+                <a href="/posts" class="is-link"><i class="fas fa-angle-left"></i> Back to posts</a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <h1 id="titleForm"><strong>Create new post</strong></h1>
+    <br>
+    <form action="" method="post">
+        <div class="field">
+            <label class="label">Name</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="Title">
+            </div>
+        </div>
+        
+        <div class="field">
+            <label class="label">Body</label>
+            <div class="control">
+                <textarea class="textarea" placeholder="body"></textarea>
+            </div>
+        </div>
+        
+        <div class="field is-grouped is-grouped-centered">
+            <div class="control">
+                <button class="button is-link is-outlined"><i class="fas fa-check"></i>&nbsp; Create post</button>
+            </div>
+            <div class="control">
+                <button class="button is-danger is-outlined">Cancel</button>
+            </div>
+        </div>
+    </form>
+@endsection
