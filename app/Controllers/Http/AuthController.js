@@ -7,11 +7,12 @@ class AuthController {
     async login( { request, response } ) {
 
         const user = new User();
-        user.userName = request.input('userName');
+        // user.userName = request.input('userName');
         user.email = request.input('email');
         user.password = request.input('password');
 
-        return user;
+        response.redirect('/');
+        // return user;
        
     }
     async register( { request, response }) {
@@ -21,7 +22,7 @@ class AuthController {
         user.email = request.input('email');
         user.password = request.input('password');
         user.save();
-        response.redirect('/login');
+        response.redirect('/signin');
     }
 }
 
