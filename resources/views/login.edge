@@ -1,0 +1,48 @@
+@layout('master')
+
+@section('body')
+<br>
+<div class="row" id="contentLogin">
+    <div class="columns is-centered">
+    <div class="card">
+        <div class="card-content">
+                        {{--  <div class="column is-1"></div>  --}}
+                        <div class="column is-12">
+                            <h1 class="title is-1 is-centred"> Login </h1>
+                            <form action="" method="post">
+                             <div class="field">
+                                 <p class="control has-icons-left has-icons-right">
+                                   <input class="input" type="email" placeholder="Email">
+                                   <span class="icon is-small is-left">
+                                     <i class="fas fa-envelope"></i>
+                                   </span>
+                                   <span class="icon is-small is-right">
+                                     <i class="fas fa-check"></i>
+                                   </span>
+                                 </p>
+                             </div>
+                             <div class="field">
+                                 <p class="control has-icons-left">
+                                   <input class="input" type="password" placeholder="Password">
+                                   <span class="icon is-small is-left">
+                                     <i class="fas fa-lock"></i>
+                                   </span>
+                                 </p>
+                             </div>
+                             <div class="field">
+                                 <p class="control">
+                                   <button class="button is-success">
+                                     Login
+                                   </button>
+                                 </p>
+                             </div>
+                            </form>
+                        </div>
+                        {{--  <div class="column is-1"></div>  --}}
+                    </div>
+        </div>
+    </div>
+  
+</div>
+  
+@endsection
