@@ -17,11 +17,13 @@
 const Route = use('Route')
 
 Route.on('/').render('welcome');
-Route.on('/signin').render('login')
+Route.on('/signin').render('login');
+Route.on('/signup').render('register');
 
 
 Route.resource('/posts', 'PostController');
 
-Route.on('/login', 'LoginController.login');
+Route.post('/login', 'AuthController.login');
+Route.post('/register', 'AuthController.register');
 
 

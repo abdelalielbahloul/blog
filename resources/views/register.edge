@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register page</title>
+    {{ style('css/bulma.min.css') }}
+    {{ style('style.css') }}
+</head>
+<body>
+        <br>
+        <div class="row" id="contentLogin">
+            <div class="columns is-centered">
+            <div class="card">
+                <div class="card-content">
+                                {{--  <div class="column is-1"></div>  --}}
+                                <div class="column is-12">
+                                    <h1 class="title is-1 is-centred"><i class="fas fa-user-plus"></i> Register </h1>
+                                    <form action="/register" method="post">
+                                        {{ csrfField() }}
+                                        <div class="field">
+                                            <p class="control has-icons-left has-icons-right">
+                                                <input class="input" name="userName" type="text" placeholder="Username">
+                                                <span class="icon is-small is-left">
+                                                <i class="fas fa-user"></i>
+                                                </span>
+                                                <span class="icon is-small is-right">
+                                                <i class="fas fa-check"></i>
+                                                </span>
+                                            </p>
+                                        </div>
+                                        <div class="field">
+                                            <p class="control has-icons-left has-icons-right">
+                                            <input class="input" name="email" type="email" placeholder="Email">
+                                            <span class="icon is-small is-left">
+                                                <i class="fas fa-envelope"></i>
+                                            </span>
+                                            <span class="icon is-small is-right">
+                                                <i class="fas fa-check"></i>
+                                            </span>
+                                            </p>
+                                        </div>
+                                     <div class="field">
+                                         <p class="control has-icons-left">
+                                           <input class="input" name="password" type="password" placeholder="Password">
+                                           <span class="icon is-small is-left">
+                                             <i class="fas fa-lock"></i>
+                                           </span>
+                                         </p>
+                                     </div>
+                                     <div class="field is-horizontal">
+                                         <p class="control">
+                                           <button class="button is-success">
+                                             Register
+                                           </button>
+                                         </p>
+                                         <a href="/signin">&nbsp;&nbsp; Login</a>
+                                     </div>
+                                    </form>
+                                </div>
+                                {{--  <div class="column is-1"></div>  --}}
+                            </div>
+                </div>
+            </div>
+          
+        </div>
+        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    
+</body>
+</html>
