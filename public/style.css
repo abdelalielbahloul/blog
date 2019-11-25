@@ -6,3 +6,8 @@
   font-size: 40px;
   font-weight: 600;
 }
+
+#content {
+  margin-top: 5%;
+  position: relative;
+}

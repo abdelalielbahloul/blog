@@ -23,8 +23,13 @@ class PostController {
         //         body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Phasellus nec iaculis mauris. ' 
         //     }
         // ]
-        const posts = await Post.all();
-        return view.render('post/index', { posts: posts.toJSON() });
+        try {
+            const posts = await Post.all();
+            return view.render('post/index', { posts: posts.toJSON() });
+        } catch (error) {
+            return view.render('post/index', error)
+        }
+      
     }
 
     async create({ view }) {
@@ -36,8 +41,16 @@ class PostController {
         post.title = request.input('title');
         post.body = request.input('body');
 
-        post.save();
-        response.redirect('/posts');
+        try {
+            post.save();
+            response.redirect('/posts');
+
+        } catch (error) {
+            console.log(error);
+            
+        }
+        
+        
     }
 
     async edit({ view }) {
